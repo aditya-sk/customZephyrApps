@@ -3,7 +3,7 @@
 REM Variables
 
 set APP_DIR=%cd%
-set BUILD_DIR=%APP_DIR%\Build
+set BUILD_DIR=%APP_DIR%\build
 set BOARD_NAME=sam_v71_xult
 
 
