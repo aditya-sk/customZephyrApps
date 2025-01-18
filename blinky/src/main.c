@@ -1,7 +1,5 @@
 /*
- * Copyright (c) 2016 Intel Corporation
- *
- * SPDX-License-Identifier: Apache-2.0
+ * Author: Aditya SanthaKulluru
  */
 
 #include <stdio.h>
@@ -14,8 +12,7 @@
 
 /* 1000 msec = 1 sec */
 #define SLEEP_TIME_MSZ   500
-#define SLEEP_TIME_MSO   1000
-/* The devicetree node identifier for the "led0" alias. */
+/* The devicetree node identifier for the "led0"and "led1" alias. */
 #define LED0_NODE DT_ALIAS(led0)
 #define LED1_NODE DT_ALIAS(led1)
 
@@ -46,11 +43,19 @@ int main(void)
 	while (1) 
 	{
 
-		// //Toggle Led1
+		// //Toggle Led0
+		gpio_pin_toggle_dt(&led0);
+		led_state0 = !led_state0;
+		printf("LED state Zero: %s\n", led_state1 ? "ON" : "OFF");
+		k_msleep(SLEEP_TIME_MSZ);
+		// Toggle led0 and led1
 		gpio_pin_toggle_dt(&led1);
 		led_state1 = !led_state1;
 		printf("LED state One: %s\n", led_state1 ? "ON" : "OFF");
+		gpio_pin_toggle_dt(&led0);
+		led_state0 = !led_state0;
 		k_msleep(SLEEP_TIME_MSZ);
+		printf("LED state zero: %s\n", led_state1 ? "ON" : "OFF");
 
 	}
 
