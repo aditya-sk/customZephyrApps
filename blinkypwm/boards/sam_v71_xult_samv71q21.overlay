@@ -2,6 +2,7 @@
 	aliases {
 		led0 = &yellow_led0;
 		led1 = &yellow_led1;
+		pwmled0 = &pwm_led0;
 	};
 
 	leds {

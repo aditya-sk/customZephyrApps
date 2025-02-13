@@ -14,7 +14,7 @@
 #include <zephyr/device.h>
 #include <zephyr/drivers/pwm.h>
 
-static const struct pwm_dt_spec pwm_led0 = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led0));
+static const struct pwm_dt_spec pwm_led0 = PWM_DT_SPEC_GET(DT_ALIAS(pwmled0));
 
 #define MIN_PERIOD PWM_SEC(1U) / 128U
 #define MAX_PERIOD PWM_SEC(1U)
@@ -26,7 +26,7 @@ int main(void)
 	uint8_t dir = 0U;
 	int ret;
 
-	printk("PWM-based blinky\n");
+	printk("PWM-based blinky with user led0\n");
 
 	if (!pwm_is_ready_dt(&pwm_led0)) {
 		printk("Error: PWM device %s is not ready\n",
