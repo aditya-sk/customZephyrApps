@@ -58,6 +58,6 @@ __pycache__/
 /doc/_build*
 
 #module directory
-/modules
+modules/
 # notes
 notes.txt
