@@ -1,4 +1,4 @@
-# Zephyr based Applications using SAMV71 Microcontroller
+# Out of tree custom Applications using Zephyr
 
 
 ## [Overview](#overview)
@@ -7,14 +7,14 @@ These peripheral applications are developed based on Microchip SAMV71 microcontr
 ## [Features](#features)
 This repository consists of the following Projects:
 1. Blinky
-2. BlinkyPWM
-3. Producer
-4. ProducerConsumer
-5. ProducerConsumerQueue
-       |
+2. Blinky Two Threads
+3. Blinky PWM
+4. Producer
+5. Producer Consumer
+6. Producer Consumer Queue
 
 ## NOTE:
-This applicaitons are created on Windows OS machine and to run these appliction, you need to install OpenOCD for debugging and flashing the binary file onto microcontroller.
+This applicaitons are created on Windows OS machine and to run these appliction, you need to install OpenOCD for debugging and flashing the hex/elf file onto microcontroller.
 
 
 # [Pre-requisites and tools to build locally](#pre-requisites-and-steps-to-test-locally)
